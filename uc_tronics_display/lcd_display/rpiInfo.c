@@ -32,7 +32,7 @@ char* get_ip_address(void)
       /* I want to get an IPv4 IP address */
       ifr.ifr_addr.sa_family = AF_INET;
       /* I want IP address attached to "eth0" */
-      strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);
+      strncpy(ifr.ifr_name, "end0", IFNAMSIZ-1);
       symbol=ioctl(fd, SIOCGIFADDR, &ifr);
       close(fd);
       if(symbol==0)
